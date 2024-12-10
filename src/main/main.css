@@ -1,0 +1,373 @@
+/* Custom styles for hospital blue color */
+.hospital-navbar {
+  background-color: #007bff; /* Hospital blue */
+  width: 100%; /* Ensure the navbar stretches to full width */
+  position: fixed; /* Keep the navbar fixed at the top */
+  top: 0; /* Position it at the top */
+  left: 0; /* Align it to the left */
+  z-index: 1000; /* Make sure the navbar is always on top */
+}
+
+/* Navbar container full width */
+.navbar-container {
+  width: 100%; /* Full width of the screen */
+}
+
+/* Navbar links spacing */
+.navbar-nav {
+  display: flex; /* Use flexbox to layout navbar items */
+  justify-content: space-evenly; /* Evenly space out the links */
+  width: 100%; /* Make navbar items fill the container */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* White color for links */
+  margin: 0; /* Remove any default margin */
+}
+
+/* Optional: Hover effect for navbar links */
+.navbar-nav .nav-link:hover {
+  color: #0a0a0b; /* Dark white color on hover */
+}
+
+/* If you want to adjust spacing further, you can use this: */
+.navbar-nav .nav-item {
+  margin-left: 0; /* Remove margin left from nav-item */
+  margin-right: 0; /* Remove margin right from nav-item */
+}
+
+/* Optional: Active state for navbar links */
+.navbar-nav .nav-link.active {
+  color: #0c0b0b; /* Dark color for active link */
+}
+
+/* Dropdown Toggle hover effect */
+#dropdown-login:hover {
+  background-color: #0056b3; /* Darker blue for the dropdown button */
+  cursor: pointer;
+}
+
+/* Dropdown Menu styles */
+.dropdown-menu {
+  background-color: #ffffff; /* White background for dropdown menu */
+  border-radius: 5px; /* Slight rounding of the edges */
+  border: 1px solid #007bff; /* Match dropdown border to navbar color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+
+/* Dropdown Item hover effect */
+.dropdown-item:hover {
+  background-color: #f1f1f1; /* Light grey on hover */
+  color: #007bff; /* Change text color to match hospital blue */
+}
+
+/* Optional: Dropdown Item active effect */
+.dropdown-item:active {
+  background-color: #d6d6d6; /* Darker grey when active */
+  color: #0056b3; /* Dark blue for active state */
+}
+
+/* Optional: Dropdown Item focused effect */
+.dropdown-item:focus {
+  background-color: #e7e7e7; /* Slightly darker grey when focused */
+  color: #0056b3; /* Dark blue for focused state */
+}
+
+/* Initial style for the login form */
+.login-form {
+  position: relative; /* Make the form's position relative for easy movement */
+  transition: transform 0.3s ease, top 0.3s ease; /* Smooth transition for transformation */
+}
+
+/* Hover effect when the mouse points to the login form */
+.login-form:hover {
+  transform: translateY(-10px); /* Move the form upwards when hovered */
+  top: -10px; /* Optional: additional movement if needed */
+}
+
+/* Bold and highlighted hospital name in the navbar */
+.navbar-brand {
+  font-weight: bold; /* Make the text bold */
+  color: #ffffff !important; /* Ensure the text color is white */
+  background-color: #007bff; /* Highlight with hospital blue background */
+  padding: 5px 15px; /* Add some padding to make the background more prominent */
+  border-radius: 5px; /* Optional: Round the corners of the background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a light shadow effect */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for the hospital name */
+.navbar-brand:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+  transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* General styles for the contact us container */
+.contact-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Make the container fill the entire viewport height */
+  background-color: #f4f7fa; /* Light background color */
+  padding: 20px;
+}
+
+/* Contact Card Styles */
+.contact-card {
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the card */
+  width: 100%;
+  max-width: 600px; /* Card width is capped at 600px */
+  padding: 30px; /* Padding inside the card */
+  text-align: center; /* Center-align text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for the contact card */
+.contact-card:hover {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+/* Contact Heading Style */
+.contact-card h2 {
+  color: #007bff; /* Hospital blue color for the heading */
+  font-size: 2rem; /* Make the heading larger */
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+/* Description Style */
+.contact-card p {
+  color: #333333; /* Dark grey text color */
+  font-size: 1.1rem; /* Slightly larger font for readability */
+  line-height: 1.5; /* Improve line spacing for better readability */
+  margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Contact Information Section */
+.contact-info {
+  background-color: #f0f8ff; /* Light blue background */
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px; /* Space above the contact info section */
+}
+
+/* Heading for the Contact Information */
+.contact-info h4 {
+  color: #007bff; /* Hospital blue color */
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Style for contact details */
+.contact-info p {
+  color: #555555; /* Darker grey for contact details */
+  font-size: 1.1rem;
+  margin: 5px 0; /* Vertical margin between the contact details */
+}
+
+.contact-info p strong {
+  color: #333333; /* Darker color for the labels (Phone, Email, Address) */
+  font-weight: bold;
+}
+
+/* General Styles for the App */
+.App {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Package Section Styles */
+.package-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.package-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Container for the Package Cards */
+.package-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Package Card Styles */
+.package-card {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px; /* Fixed width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  background-color: #ffffff;
+  border: 2px solid #007bff; /* Border to match the theme */
+}
+
+.package-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.package-card h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.package-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.package-card ul li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.package-card ul li::before {
+  content: "✔️"; /* Add checkmark icon */
+  margin-right: 10px;
+  color: #28a745; /* Green checkmark */
+}
+
+/* Price Button Style */
+.price-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.price-button:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .package-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package-card {
+    width: 90%; /* Take up full width on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .package-section h1 {
+    font-size: 2rem;
+  }
+}
+/* Service Page Styles */
+.service-page {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.service-page h1 {
+  font-size: 2.5rem;
+  color: #007bff; /* Hospital theme blue color */
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Exactly 4 services per row */
+  gap: 20px; /* Space between cards */
+  justify-items: center; /* Center cards within the grid */
+  padding: 20px;
+}
+
+/* Individual Service Card */
+.service-card {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 250px; /* Max width for the card */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h4 {
+  font-size: 1.5rem;
+  color: #333; /* Darker text for better readability */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Hover Effect for Service Card */
+.service-card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  background: rgba(0, 123, 255, 0.1); /* Light blue hover effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 services per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-page h1 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 services per row for narrow screens */
+  }
+
+  .service-card {
+    max-width: 200px; /* Smaller max width for mobile */
+  }
+
+  .service-card h4 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 service per row for very small screens */
+  }
+}
+
+
+.botpenguin-chatbot-container {
+  width: 450px;  /* Set the desired width */
+  height: 500px; /* Set the desired height */
+  position: fixed; /* Make sure it's fixed to the viewport */
+  bottom: 20px; /* Move it 20px from the bottom */
+  right: 20px;  /* Move it 20px from the right */
+  z-index: 1000; /* Make sure it stays on top of other elements */
+}
+
+/* Optional: Adjust the chatbot iframe size if necessary */
+.botpenguin-chatbot-container iframe {
+  width: 100%;
+  height: 100%;
+}
