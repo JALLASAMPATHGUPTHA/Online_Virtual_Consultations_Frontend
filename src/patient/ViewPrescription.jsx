@@ -2,29 +2,29 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './patient.css';
 import config from './../config';
+
 export default function ViewPrescription() {
-  const [patient, setPatient] = useState(null); // Start with null instead of an empty object
+  const [patient, setPatient] = useState(null);
   const [prescriptiondata, setPrescription] = useState([]);
   const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(''); // State for success message
 
-  // Load patient data only once on component mount
   useEffect(() => {
     const storedPatientData = localStorage.getItem('patient');
     if (storedPatientData) {
       const parsedPatientData = JSON.parse(storedPatientData);
       setPatient(parsedPatientData);
     } else {
-      console.log("No Patient data found in localStorage.");
+      console.log('No Patient data found in localStorage.');
     }
   }, []);
 
-  // Fetch prescriptions once patient data is loaded
   useEffect(() => {
     if (patient) {
       const fetchPrescriptions = async () => {
         try {
           const response = await axios.get(`${config.url}viewallmyprescription?email=${patient.email}`);
-          console.log(response.data); // Debugging log
+          console.log(response.data);
           setPrescription(response.data);
         } catch (error) {
           console.error('Error fetching prescriptions:', error);
@@ -36,7 +36,6 @@ export default function ViewPrescription() {
     }
   }, [patient]);
 
-  // Place an order for a prescription
   const placeOrder = async (prescription) => {
     try {
       const { email, medicine, department } = prescription;
@@ -54,6 +53,8 @@ export default function ViewPrescription() {
         }
       );
       console.log('Order placed successfully:', response.data);
+      setSuccessMessage('You placed an order successfully!'); 
+      setTimeout(() => setSuccessMessage(''), 3000); 
     } catch (error) {
       console.error('Error placing order:', error);
       setError('Failed to place order.');
@@ -63,6 +64,7 @@ export default function ViewPrescription() {
   return (
     <div>
       {error && <p className="error">{error}</p>}
+      {successMessage && <p className="success">{successMessage}</p>} 
       {prescriptiondata.length > 0 ? (
         prescriptiondata.map((prescription, index) => (
           <div key={index} className="patient-card">
