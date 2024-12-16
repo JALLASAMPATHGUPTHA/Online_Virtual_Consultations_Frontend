@@ -36,8 +36,8 @@ export default function DoctorNavBar() {
               {/* Dropdown for Profile */}
               <Dropdown className="mx-3">
                 <DropdownButton id="dropdown-basic-button" title="Profile">
-                  <Dropdown.Item as={Link} to="/doctupdateprofile">Update Profile</Dropdown.Item>
-                  <Dropdown.Item as={Link} to="/doctorprofile">Profile</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/doctupdateprofile">Update</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/doctorprofile">View</Dropdown.Item>
                 </DropdownButton>
               </Dropdown>
             </Nav>
