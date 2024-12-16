@@ -34,8 +34,8 @@ export default function AdminNavBar() {
               {/* Dropdown for Add */}
               <Dropdown className="mx-3">
                 <DropdownButton   id="dropdown-basic-button" title="Add">
-                  <Dropdown.Item as={Link} to="/adddoctor">Add Doctor</Dropdown.Item>
-                  <Dropdown.Item as={Link} to="/addpharmacist">Add Pharmacist</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/adddoctor">Doctor</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/addpharmacist">Pharmacist</Dropdown.Item>
                 </DropdownButton>
               </Dropdown>
 
