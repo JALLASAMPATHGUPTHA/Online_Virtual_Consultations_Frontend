@@ -4,7 +4,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import Home from './Home';
 import About from './About';
 import Facilities from './Facilities';
-import OurTeam from './OurTeam';
+
 import Service from './Service';
 import Contact from './Contact';
 import Packages from './Packages';
@@ -34,7 +34,7 @@ export default function MainNavBar({ onAdminLogin, onDoctorLogin, onPatientLogin
               <Nav.Link as={Link} to="/" className="mx-3">Home</Nav.Link>
               <Nav.Link as={Link} to="/about" className="mx-3">About</Nav.Link>
               <Nav.Link as={Link} to="/facilities" className="mx-3">Facilities</Nav.Link>
-              <Nav.Link as={Link} to="/ourTeam" className="mx-3">Our Team</Nav.Link>
+              
               <Nav.Link as={Link} to="/service" className="mx-3">Service</Nav.Link>
               <Nav.Link as={Link} to="/packages" className="mx-3">Packages</Nav.Link>
               <Nav.Link as={Link} to="/contact" className="mx-3">Contact Us</Nav.Link>
@@ -75,7 +75,7 @@ export default function MainNavBar({ onAdminLogin, onDoctorLogin, onPatientLogin
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/facilities" element={<Facilities />} />
-        <Route path="/ourTeam" element={<OurTeam />} />
+        
         <Route path="/service" element={<Service />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/contact" element={<Contact />} />
