@@ -36,8 +36,8 @@ export default function PatientNavBar() {
 
               {/* Profile Dropdown */}
               <NavDropdown title="Profile" id="profile-dropdown" className="mx-2">
-                <NavDropdown.Item as={Link} to="/PatientProfile">View Profile</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/UpdateProfile">Update Profile</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/PatientProfile">View</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/UpdateProfile">Update</NavDropdown.Item>
               </NavDropdown>
             </Nav>
 
