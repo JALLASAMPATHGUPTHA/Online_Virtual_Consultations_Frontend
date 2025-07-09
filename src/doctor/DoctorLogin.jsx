@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './doctor.css';
+import './doctor.css';  // Import the external CSS file
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ReCAPTCHA from 'react-google-recaptcha'; // 👈 reCAPTCHA added
+import './doctor.css'
 import config from './../config';
 
 export default function DoctorLogin({ onDoctorLogin }) {
@@ -14,7 +14,6 @@ export default function DoctorLogin({ onDoctorLogin }) {
 
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
-  const [captchaToken, setCaptchaToken] = useState(null); // 👈 token state added
 
   const navigate = useNavigate();
 
@@ -23,25 +22,15 @@ export default function DoctorLogin({ onDoctorLogin }) {
     setFormData({ ...formData, [id]: value });
   };
 
-  const handleCaptchaChange = (token) => {
-    setCaptchaToken(token);
-    setError('');
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!captchaToken) {
-      setError('Please complete the CAPTCHA.');
-      return;
-    }
 
     try {
       const response = await axios.post(
         `${config.url}checkdoctorlogin`, formData, 
         {
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json', // Sending JSON data
           },
         }
       );
@@ -95,15 +84,6 @@ export default function DoctorLogin({ onDoctorLogin }) {
               className="form-input"
             />
           </div>
-
-          {/* ✅ reCAPTCHA added here */}
-          <div style={{ marginBottom: '10px' }}>
-            <ReCAPTCHA
-              sitekey="6LfQl30rAAAAABYdKA4bsf9yzbK8f7VkxaLJjyt1" // Replace with your actual site key
-              onChange={handleCaptchaChange}
-            />
-          </div>
-
           <button type="submit" className="login-button">
             Login
           </button>
